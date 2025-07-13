@@ -15,7 +15,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 # Specify the Telegram channel or group ID that users must join (force-subscribe) before using the bot.
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002157930558"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", ""))
 FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", ""))
 FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", ""))
@@ -29,28 +29,28 @@ USER_REPLY_TEXT = os.environ.get("USER_REPLY_TEXT", "Hi, I am made by @trinityXm
 # Paste your bot token here (get it from https://t.me/BotFather)
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "") 
 # Provide the API ID associated with your Telegram application (from https://my.telegram.org/apps)
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = int(os.environ.get("APP_ID", "24890303"))
 # Provide the API Hash linked to your Telegram application (available at https://my.telegram.org/apps)
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "94cf78d1e6883ecb10f32e31fc23cfe0")
 # Enter the channel ID of the database channel where all files will be stored.
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002755896210"))
 # Enter your personal Telegram user ID (you can get it by sending '/id' to https://t.me/MissRose_bot).
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "7289855833"))
 #port set to default 8080, change according to your will.
 PORT = os.environ.get("PORT", "8080")
 # Enter your MongoDB connection URL. You can use a free cloud database from MongoDB Atlas.
 DB_URL = os.environ.get("DB_URL", "")
 # Enter the name of your MongoDB database.
-DB_NAME = os.environ.get("DB_NAME", "")
+DB_NAME = os.environ.get("DB_NAME", "Cluster0")
 
 # Set the number of worker threads for the bot. To avoid sleeping issues and improve performance, keep it above 50 (recommended).
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "50"))
 # Message displayed to users when they click the Start button or send the /start command.
 START_MSG = os.environ.get("START_MESSAGE", "ʜᴇʟʟᴏ ᴛʜᴇʀᴇ {mention}!!🌚\n\nɪ ᴀᴍ ᴅᴇꜱɪɢɴᴇᴅ ᴛᴏ ꜱʜᴀʀᴇ ꜰɪʟᴇꜱ ᴛʜʀᴏᴜɢʜ ꜱᴘᴇᴄɪᴀʟ ʟɪɴᴋꜱ!! 🪄\n\nɪ ᴡᴏʀᴋ ᴡɪᴛʜɪɴ ɪɴꜰᴏʜᴜʙ ɴᴇᴛᴡᴏʀᴋꜱ ᴏɴʟʏ ᴀɴᴅ ʏᴏᴜ ᴀʀᴇ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴜꜱᴇ ᴍᴇ! 🎀")
 # Enter your Telegram username (without @). A public username is required to use this bot.
-OWNER_TAG = os.environ.get("OWNER_TAG", "the_universal_being")
+OWNER_TAG = os.environ.get("OWNER_TAG", "@Nkkwksl")
 # Time (in seconds) after which messages will be auto-deleted. Use 0 to keep messages permanently.
-TIME = int(os.environ.get("TIME", "600"))
+TIME = int(os.environ.get("TIME", "0"))
 
 # Toggle this feature by setting the value inside to either True (on) or False (off).
 # TRUE for yes FALSE if no
@@ -58,7 +58,7 @@ TIME = int(os.environ.get("TIME", "600"))
 # Do you want to enable shortner in this bot? Set to TRUE for yes, False for no.
 USE_SHORTLINK = True if os.environ.get('USE_SHORTLINK', "False") == "TRUE" else False 
 # Enter the base URL of the shortlink service (without https://).
-SHORTLINK_API_URL = os.environ.get("SHORTLINK_API_URL", "gplinks.com")
+SHORTLINK_API_URL = os.environ.get("SHORTLINK_API_URL", "")
 # Enter the API key provided by your chosen shortner service.
 SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "")
 # Set a custom expiration time (in seconds) for the shortlink.
@@ -100,7 +100,7 @@ PRICE5 = os.environ.get("PRICE5", "₹285")
 # Message shown to users when they are required to join a channel or group (force subscription prompt).
 FORCE_MSG = os.environ.get("FORCE_MSG", "ʜᴇʟʟᴏ ᴛʜᴇʀᴇ {mention}!!👋\n\n<b>ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴇꜱ, ʏᴏᴜ ᴀʀᴇ ʀᴇQᴜᴇꜱᴛᴇᴅ ᴛᴏ ꜱᴜᴘᴘᴏʀᴛ ᴜꜱ ʙʏ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ:</b>")
 # Enter a custom caption that will be auto-attached to files shared by the bot.
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "Bot is designed with ❤️ by :\n\n<b>Trinity Mods</b>\n\nGithub: https://github.com/Trinity-Mods\nTelegram: https://t.me/trinityXmods")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "by :\n\n<b>@KdramaTalkies</b>\n\nGithub: https://github.com/Trinity-Mods\nTelegram: https://t.me/trinityXmods")
 # Protect content from being forwarded or saved. Set to TRUE to enable, FALSE to disable (recommended: FALSE).
 PROTECT_CONTENT = True if os.environ.get("PROTECT_CONTENT", "FALSE") == "TRUE" else False
 # Use this option if you do not want buttons to appear on posts in the database channel.  
